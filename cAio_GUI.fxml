@@ -49,7 +49,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="558.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scripts.BuilderAPI.gui.QuestGUIController">
+<VBox prefHeight="558.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -165,13 +165,30 @@
                         </AnchorPane>
                      </content>
                   </Tab>
+                  <Tab text="Skill Task">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ComboBox layoutX="34.0" layoutY="38.0" onAction="#updateSelectedSkill" prefWidth="150.0" promptText="Skill" />
+                              <ComboBox fx:id="craftingMethodBox" layoutX="217.0" layoutY="38.0" prefWidth="150.0" promptText="Crafting Method" />
+                              <Button fx:id="addSkillButton" layoutX="163.0" layoutY="408.0" mnemonicParsing="false" onAction="#createSkillTask" text="Add Skill" />
+                              <TextField fx:id="startLevelBox" layoutX="34.0" layoutY="78.0" prefHeight="26.0" prefWidth="96.0" promptText="Start Level" />
+                              <TextField fx:id="endLevelBox" layoutX="34.0" layoutY="113.0" prefHeight="26.0" prefWidth="96.0" promptText="End Level" />
+                              <ComboBox fx:id="magicMethodBox" layoutX="217.0" layoutY="150.0" prefWidth="150.0" promptText="Magic Method" />
+                              <ComboBox fx:id="fletchingMethodBox" layoutX="217.0" layoutY="113.0" prefWidth="150.0" promptText="Fletching Method" />
+                              <ComboBox fx:id="cookingAreabox" layoutX="217.0" layoutY="78.0" prefWidth="150.0" promptText="Cooking Area" />
+                              <TextField fx:id="abc2SkillPercentage" layoutX="34.0" layoutY="150.0" prefHeight="26.0" prefWidth="96.0" promptText="ABC2 Sleep %" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
               </tabs>
             </TabPane>
             <ScrollPane layoutX="433.0" layoutY="31.0" prefHeight="454.0" prefWidth="208.0">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="452.0" prefWidth="193.0">
                      <children>
-                        <ListView fx:id="selectedSkillsListView" prefHeight="454.0" prefWidth="200.0" />
+                        <ListView fx:id="selectedSkillsListView" layoutX="-3.0" layoutY="-1.0" prefHeight="454.0" prefWidth="200.0" />
                      </children></AnchorPane>
               </content>
             </ScrollPane>
